@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1c383c5e-5229-4aeb-9322-a4c6443b83f1" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\.buildinfo" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\.nojekyll" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_images\Some_Global_text.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\course-info\Installing_Anacondas_GIS.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\course-info\License-terms.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\course-info\course-info.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\index.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\lessons\L1\Geometric-Objects.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\lessons\L1\Intro-Python-GIS.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\lessons\L1\ex-1.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\lessons\L1\exercise-1-hints.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\lessons\L1\lecture.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_sources\lessons\L1\overview.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\basic.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\comment-bright.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\comment-close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\comment.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\css\badge_only.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\css\theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\doctools.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\down-pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\down.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\file.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\Inconsolata-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\Inconsolata-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\Lato-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\Lato-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\RobotoSlab-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\RobotoSlab-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\fonts\fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\geo-python.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\jquery-1.11.1.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\js\modernizr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\js\theme.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\logo_hy_geo_135.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\minus.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\plus.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\pygments.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\searchtools.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\underscore-1.3.1.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\underscore.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\up-pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\up.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\_static\websupport.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\course-info\Installing_Anacondas_GIS.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\course-info\License-terms.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\course-info\course-info.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\course-info\Installing_Anacondas_GIS.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\course-info\License-terms.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\course-info\course-info.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\environment.pickle" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\index.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\lessons\L1\Geometric-Objects.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\lessons\L1\Intro-Python-GIS.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\lessons\L1\ex-1.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\lessons\L1\exercise-1-hints.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\lessons\L1\lecture.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\doctrees\lessons\L1\overview.doctree" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\genindex.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\lessons\L1\Geometric-Objects.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\lessons\L1\Intro-Python-GIS.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\lessons\L1\ex-1.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\lessons\L1\exercise-1-hints.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\lessons\L1\lecture.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\lessons\L1\overview.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\objects.inv" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\search.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\HY-Data\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\2017\searchindex.js" afterPath="" />
+    </list>
+    <ignored path="2017.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="2017" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/source/index.rst" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c383c5e-5229-4aeb-9322-a4c6443b83f1" name="Default" comment="" />
+      <created>1509457454157</created>
+      <option name="number" value="Default" />
+      <updated>1509457454157</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added a new banner">
+      <created>1509457509160</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1509457509160</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added new banner">
+      <created>1509457997397</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1509457997397</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Added a new banner" />
+    <MESSAGE value="Added new banner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new banner" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
