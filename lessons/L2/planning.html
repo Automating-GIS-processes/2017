@@ -19,7 +19,7 @@
     </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Exercise 1 &mdash; Geo-Python - AutoGIS  documentation</title>
+  <title>Planning &mdash; Geo-Python - AutoGIS  documentation</title>
   
 
   
@@ -47,8 +47,6 @@
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Geo-Python - AutoGIS  documentation" href="../../index.html"/>
-        <link rel="next" title="Exercise 1 hints" href="exercise-1-hints.html"/>
-        <link rel="prev" title="Geometric Objects - Spatial Data Model" href="Geometric-Objects.html"/>
     <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
      
 
@@ -114,13 +112,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../course-info/License-terms.html">License and terms of usage</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Lesson 1</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Intro-Python-GIS.html">Introduction to Python GIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Lesson overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture.html">Lecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Geometric-Objects.html">Geometric Objects - Spatial Data Model</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Exercise 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercise-1-hints.html">Exercise 1 hints</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Intro-Python-GIS.html">Introduction to Python GIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lecture.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Geometric-Objects.html">Geometric Objects - Spatial Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/ex-1.html">Exercise 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1-hints.html">Exercise 1 hints</a></li>
 </ul>
 
             
@@ -165,14 +163,14 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>Exercise 1</li>
+      <li>Planning</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/Automating-GIS-processes/2017/blob/master/source/lessons/L1/ex-1.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/Automating-GIS-processes/2017/blob/master/source/lessons/L2/planning.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -186,15 +184,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="exercise-1">
-<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-start-your-assignment admonition">
-<p class="first admonition-title">Start your assignment</p>
-<p>You can start working on your copy of Exercise 1 by <a class="reference external" href="https://classroom.github.com/a/0n-zYugp">accepting the GitHub Classroom assignment</a>.</p>
-<p class="last"><strong>Exercise 1 is due by the start of lecture on 6.11</strong>.</p>
-</div>
-<p>You can also take a look at the open course copy of <a class="reference external" href="https://github.com/AutoGIS-2017/Exercise-1">Exercise 1 in the course GitHub repository</a> (does not require logging in).
-Note that you should not try to make changes to this copy of the exercise, but rather only to the copy available via GitHub Classroom.</p>
+  <div class="section" id="planning">
+<h1>Planning<a class="headerlink" href="#planning" title="Permalink to this headline">¶</a></h1>
+<p>Last year there was only Pandas as Geopandas stuff. Now we have more time to focus on Geopandas.</p>
+<p><strong>Things to cover in Lesson 2:</strong></p>
+<ul class="simple">
+<li>Reading / writing Shapefile</li>
+<li>Basic structure / attributes of a GeoDataFrame</li>
+<li>Working with geometries in GeoDataFrame (calculating areas etc.)</li>
+<li>Iterating over rows and creating a LineString from centroid of Polygons to specific destination point (to demonstrate the usefulness of apply function)</li>
+<li><dl class="first docutils">
+<dt>Projections &#8211;&gt; Reprojecting data</dt>
+<dd><ul class="first last">
+<li>We could create a function that returns a GeoDataFrame with identical crs for each input dataset</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Recap of a table join</li>
+</ul>
+<p><strong>Things to cover in Lesson 3:</strong></p>
+<ul class="simple">
+<li>Geocoding, using Nominatim (<a class="reference external" href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a>) &#8211;&gt; provider=&#8217;nominatim&#8217; &#8211;&gt; does not require API key</li>
+<li>Point in Polygon / Intersect</li>
+<li>Spatial Join</li>
+<li>Nearest point (scipy.spatial)</li>
+</ul>
+<p><strong>Things to cover in Lesson 4:</strong></p>
+<ul class="simple">
+<li>Overlay analysis</li>
+<li>Aggregating data</li>
+<li>Simplifying geometries</li>
+<li>Data reclassification (own made + pysal)</li>
+</ul>
+<p><strong>Things to cover in Lesson 5:</strong></p>
+<ul class="simple">
+<li>Visualizing static maps (how to put layers on top of each other)
+- Create a subplot with different maps and a graph</li>
+<li>Visualizing interactive maps with Bokeh
+- Use map tiles e.g. from OpenStreetMap</li>
+<li>Create functions that handles MultiPolygon and MultiLineStrings (show the problem)</li>
+</ul>
 </div>
 
 
@@ -204,15 +234,6 @@ Note that you should not try to make changes to this copy of the exercise, but r
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="exercise-1-hints.html" class="btn btn-neutral float-right" title="Exercise 1 hints" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Geometric-Objects.html" class="btn btn-neutral" title="Geometric Objects - Spatial Data Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
