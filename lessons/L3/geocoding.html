@@ -138,9 +138,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Geocoding</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview-of-geocoders">Overview of Geocoders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#geocoding-in-geopandas">Geocoding in Geopandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-join">Table join</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#table-join">Table join</a></li>
 <li class="toctree-l1"><a class="reference internal" href="point-in-polygon.html">Point in Polygon &amp; Intersect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spatial-join.html">Spatial join</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nearest-neighbour.html">Nearest Neighbour Analysis</a></li>
@@ -340,9 +340,8 @@ However, the <code class="docutils literal"><span class="pre">id</span></code> c
 information from <code class="docutils literal"><span class="pre">data</span></code> into our new GeoDataFrame <code class="docutils literal"><span class="pre">geo</span></code>, thus making
 a <strong>Table Join</strong>.</p>
 </div>
-</div>
 <div class="section" id="table-join">
-<h1>Table join<a class="headerlink" href="#table-join" title="Permalink to this headline">¶</a></h1>
+<h2>Table join<a class="headerlink" href="#table-join" title="Permalink to this headline">¶</a></h2>
 <p>Table joins are really common procedures when
 doing GIS analyses. As you might remember from our earlier lessons, combining data from different tables based on common
 <code class="docutils literal"><span class="pre">key</span></code> attribute can be done easily in Pandas/Geopandas using <a class="reference external" href="https://geo-python.github.io/2017/lessons/L6/exercise-6-hints.html?highlight=merge#joining-data-from-one-dataframe-to-another">.merge()</a>
@@ -353,16 +352,37 @@ In fact, now we have such a situation as we are geocoding our addresses where th
 as in our original <code class="docutils literal"><span class="pre">data</span></code> DataFrame.</p>
 <p>Hence, we can join those tables together with <code class="docutils literal"><span class="pre">join()</span></code> -function which merges the two DataFrames together
 based on index by default.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">join</span> <span class="o">=</span> <span class="n">geo</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="gp">In [6]: </span><span class="n">join</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[6]: </span><span class="go"></span>
+<span class="go">                                             address  \</span>
+<span class="go">0  Ruoholahti, 14, Itämerenkatu, Ruoholahti, Läns...   </span>
+<span class="go">1  Kamppi, 1, Kampinkuja, Kamppi, Eteläinen suurp...   </span>
+<span class="go">2  Citycenter, 8, Kaivokatu, Keskusta, Kluuvi, Et...   </span>
+<span class="go">3  Hermannin rantatie, Kalasatama, Sörnäinen, Hel...   </span>
+<span class="go">4  Hesburger Jätkäsaari, 9, Tyynenmerenkatu, Jätk...   </span>
+
+<span class="go">                             geometry    id  \</span>
+<span class="go">0       POINT (24.9155655 60.1632005)  1000   </span>
+<span class="go">1       POINT (24.9316914 60.1690222)  1001   </span>
+<span class="go">2  POINT (24.94244049213 60.16988445)  1002   </span>
+<span class="go">3        POINT (24.9775188 60.187927)  1003   </span>
+<span class="go">4       POINT (24.9215601 60.1566956)  1005   </span>
+
+<span class="go">                                            addr  </span>
+<span class="go">0       Itämerenkatu 14, 00101 Helsinki, Finland  </span>
+<span class="go">1          Kampinkuja 1, 00100 Helsinki, Finland  </span>
+<span class="go">2           Kaivokatu 8, 00101 Helsinki, Finland  </span>
+<span class="go">3  Hermannin rantatie 1, 00580 Helsinki, Finland  </span>
+<span class="go">4     Tyynenmerenkatu 9, 00220 Helsinki, Finland  </span>
+</pre></div>
+</div>
 <ul class="simple">
 <li>Let&#8217;s also check the data type of our new <code class="docutils literal"><span class="pre">join</span></code> table.</li>
 </ul>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="nb">type</span><span class="p">(</span><span class="n">join</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-5-9a8f935adda6&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">type</span><span class="p">(</span><span class="n">join</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;join&#39; is not defined
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="nb">type</span><span class="p">(</span><span class="n">join</span><span class="p">)</span>
+<span class="gh">Out[7]: </span><span class="go">geopandas.geodataframe.GeoDataFrame</span>
 </pre></div>
 </div>
 <p>As a result we have a new GeoDataFrame called <code class="docutils literal"><span class="pre">join</span></code> where we now have
@@ -385,6 +405,7 @@ and made a Shapefile out of them. Easy isn&#8217;t it!</p>
 However, in some cases, you might not have such well-defined addresses, and you might have e.g. only the name of a museum available.
 In such cases, Nominatim might not provide such good results, and in such cases you might want to use e.g. <a class="reference external" href="https://developers.google.com/maps/documentation/geocoding/">Google Geocoding API (V3)</a>.
 Take a look from last year, <a class="reference external" href="https://automating-gis-processes.github.io/2016/Lesson3-geocoding.html#geocoding-in-geopandas">where we show how to use Google Geocoding API</a> in a similar manner as we used Nominatim here.</p>
+</div>
 </div>
 </div>
 

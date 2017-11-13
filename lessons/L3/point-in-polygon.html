@@ -136,7 +136,6 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture.html">Lecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geocoding.html">Geocoding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geocoding.html#table-join">Table join</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Point in Polygon &amp; Intersect</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-check-if-point-is-inside-a-polygon">How to check if point is inside a polygon?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#intersect">Intersect</a></li>
@@ -378,10 +377,11 @@ interiors shoud NOT intersect.</li>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="go"># Create a MultiLineString</span>
 <span class="gp">In [12]: </span><span class="n">multi_line</span> <span class="o">=</span> <span class="n">MultiLineString</span><span class="p">([</span><span class="n">line_a</span><span class="p">,</span> <span class="n">line_b</span><span class="p">])</span>
 
-<span class="gp">In [13]: </span><span class="n">multi_line</span><span class="p">;</span>
+<span class="gp">In [13]: </span><span class="n">multi_line</span>
+<span class="gh">Out[13]: </span><span class="go">&lt;shapely.geometry.multilinestring.MultiLineString at 0x1fd364cb2e8&gt;</span>
 </pre></div>
 </div>
-<img alt="lessons\L3\Lesson3-point-in-polygon_files/Lesson3-point-in-polygon_16_0.svg" src="lessons\L3\Lesson3-point-in-polygon_files/Lesson3-point-in-polygon_16_0.svg" /><p>Thus, the <code class="docutils literal"><span class="pre">line_b</span></code> continues from the same node ( (1,1) ) where <code class="docutils literal"><span class="pre">line_a</span></code> ends.</p>
+<p>Thus, the <code class="docutils literal"><span class="pre">line_b</span></code> continues from the same node ( (1,1) ) where <code class="docutils literal"><span class="pre">line_a</span></code> ends.</p>
 <p>However, if the lines overlap fully, they don&#8217;t touch due to the spatial relationship rule, as we can see:</p>
 <ul class="simple">
 <li>Check if line_a touches itself</li>
