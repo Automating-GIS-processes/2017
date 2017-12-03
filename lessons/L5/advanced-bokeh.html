@@ -234,11 +234,11 @@ in Bokeh and add a legend into the map which is one of the key elements of a goo
 <ul class="simple">
 <li>Let&#8217;s import the modules and functions that we need</li>
 </ul>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">bokeh.palettes</span> <span class="kn">import</span> <span class="n">YlOrRd</span> <span class="k">as</span> <span class="n">palette</span>  <span class="c1">#Spectral6 as palette</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">bokeh.palettes</span> <span class="kn">import</span> <span class="n">YlOrRd6</span> <span class="k">as</span> <span class="n">palette</span>
 
 <span class="gp">In [2]: </span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">save</span>
 
-<span class="gp">In [3]: </span><span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">ColumnDataSource</span><span class="p">,</span> <span class="n">HoverTool</span><span class="p">,</span> <span class="n">LogColorMapper</span>
+<span class="gp">In [3]: </span><span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">ColumnDataSource</span><span class="p">,</span> <span class="n">HoverTool</span><span class="p">,</span> <span class="n">LogColorMapper</span><span class="p">,</span> <span class="n">GeoJSONDataSource</span>
 
 <span class="gp">In [4]: </span><span class="kn">from</span> <span class="nn">bokeh.palettes</span> <span class="kn">import</span> <span class="n">RdYlGn10</span> <span class="k">as</span> <span class="n">palette</span>
 
@@ -267,12 +267,6 @@ in Bokeh and add a legend into the map which is one of the key elements of a goo
 <span class="gp">In [9]: </span><span class="n">roads</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">roads_fp</span><span class="p">)</span>
 
 <span class="gp">In [10]: </span><span class="n">metro</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">metro_fp</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-10-73021ab370bd&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">metro</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">metro_fp</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;metro_fp&#39; is not defined
 </pre></div>
 </div>
 <ul class="simple">
@@ -283,16 +277,15 @@ in Bokeh and add a legend into the map which is one of the key elements of a goo
 <span class="gp">In [12]: </span><span class="n">roads</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">roads</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">3067</span><span class="p">)</span>
 
 <span class="gp">In [13]: </span><span class="n">metro</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metro</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">3067</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-13-bbf00fa07126&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">metro</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metro</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">3067</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;metro&#39; is not defined
 </pre></div>
 </div>
 <p>Next, let&#8217;s create a set of functions that are used for getting the x and y coordinates of the geometries.
 Shapefiles etc. can often have Multi-geometries (MultiLineStrings etc.), thus we need to handle those as well which makes things slightly more complicated.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Nowadays, converting GeoDataFrames to a format that Bokeh understands is much easier with dedicated <code class="docutils literal"><span class="pre">GeoJSONDataSource</span></code> object than shown in here.
+Take a look at the <a href="#id1"><span class="problematic" id="id2">example_</span></a> at the end of this page.</p>
+</div>
 <ul class="simple">
 <li>It is always a good practice to slice your functions into small pieces which is what we have done here:</li>
 </ul>
@@ -398,20 +391,8 @@ Shapefiles etc. can often have Multi-geometries (MultiLineStrings etc.), thus we
 <li>Calculate the x and y coordinates of metro.</li>
 </ul>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [18]: </span><span class="n">metro</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metro</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">getCoords</span><span class="p">,</span> <span class="n">geom_col</span><span class="o">=</span><span class="s2">&quot;geometry&quot;</span><span class="p">,</span> <span class="n">coord_type</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-18-068b1876afbd&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">metro</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metro</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">getCoords</span><span class="p">,</span> <span class="n">geom_col</span><span class="o">=</span><span class="s2">&quot;geometry&quot;</span><span class="p">,</span> <span class="n">coord_type</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;metro&#39; is not defined
 
 <span class="gp">In [19]: </span><span class="n">metro</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metro</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">getCoords</span><span class="p">,</span> <span class="n">geom_col</span><span class="o">=</span><span class="s2">&quot;geometry&quot;</span><span class="p">,</span> <span class="n">coord_type</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ---------------------------------------------------------------------------</span>
-<span class="go">NameError                                 Traceback (most recent call last)</span>
-<span class="go">&lt;ipython-input-19-bbb9ab238e33&gt; in &lt;module&gt;()</span>
-<span class="go">----&gt; 1 metro[&#39;y&#39;] = metro.apply(getCoords, geom_col=&quot;geometry&quot;, coord_type=&quot;y&quot;, axis=1)</span>
-
-<span class="go">NameError: name &#39;metro&#39; is not defined</span>
 </pre></div>
 </div>
 <p>Next, we need to classify the travel time values into 5 minute intervals using Pysal&#8217;s user defined classifier. We also create legend labels for the classes.</p>
@@ -563,6 +544,46 @@ Shapefiles etc. can often have Multi-geometries (MultiLineStrings etc.), thus we
 <span class="n">save</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">output_file</span><span class="p">);</span>
 </pre></div>
 </div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p><strong>Important update!</strong> Bokeh nowadays support <code class="docutils literal"><span class="pre">GeoJSONDataSource</span></code> that makes it much easier to work and
+plot data from <code class="docutils literal"><span class="pre">GeoDataFrame</span></code>. Take a look of the following .. _example:</p>
+<div class="code python last highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">save</span><span class="p">,</span> <span class="n">figure</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="k">import</span> <span class="n">GeoJSONDataSource</span>
+
+<span class="n">addresses_fp</span> <span class="o">=</span> <span class="s1">r&#39;/home/geo/addresses.shp&#39;</span>
+<span class="n">roads_fp</span> <span class="o">=</span> <span class="s1">r&#39;/home/geo/roads.shp&#39;</span>
+
+<span class="c1"># Read the data</span>
+<span class="n">addresses</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">addresses_fp</span><span class="p">)</span>
+<span class="n">roads</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">roads_fp</span><span class="p">)</span>
+
+<span class="c1"># Reproject to the same projection</span>
+<span class="n">CRS</span> <span class="o">=</span> <span class="n">roads</span><span class="o">.</span><span class="n">crs</span>
+<span class="n">addresses</span> <span class="o">=</span> <span class="n">addresses</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">CRS</span><span class="p">)</span>
+
+<span class="c1"># Convert GeoDataFrames into GeoJSONDataSource objects (similar to ColumnDataSource)</span>
+<span class="n">point_source</span> <span class="o">=</span> <span class="n">GeoJSONDataSource</span><span class="p">(</span><span class="n">geojson</span><span class="o">=</span><span class="n">addresses</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
+<span class="n">roads_source</span> <span class="o">=</span> <span class="n">GeoJSONDataSource</span><span class="p">(</span><span class="n">geojson</span><span class="o">=</span><span class="n">roads</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
+
+<span class="c1"># Initialize our plot figure</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;A test map&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add the lines to the map from our GeoJSONDataSource -object (it is important to specify the columns as &#39;xs&#39; and &#39;ys&#39;)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">multi_line</span><span class="p">(</span><span class="s1">&#39;xs&#39;</span><span class="p">,</span> <span class="s1">&#39;ys&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">roads_source</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Add the lines to the map from our &#39;msource&#39; ColumnDataSource -object</span>
+<span class="n">p</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">point_source</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="c1"># Output filepath</span>
+<span class="n">outfp</span> <span class="o">=</span> <span class="s2">r&quot;C:\HY-DATA\HENTENKA\KOODIT\Opetus\Automating-GIS-processes\Test\Martta_Ex5\test_map.html&quot;</span>
+
+<span class="c1"># Save the map</span>
+<span class="n">save</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">outfp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -588,7 +609,7 @@ Shapefiles etc. can often have Multi-geometries (MultiLineStrings etc.), thus we
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Henrikki Tenkanen.
-      Last updated on Nov 27, 2017.
+      Last updated on Dec 03, 2017.
 
     </p>
   </div>

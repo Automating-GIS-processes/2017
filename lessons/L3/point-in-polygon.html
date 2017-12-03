@@ -399,7 +399,7 @@ interiors shoud NOT intersect.</li>
 <span class="gp">In [12]: </span><span class="n">multi_line</span> <span class="o">=</span> <span class="n">MultiLineString</span><span class="p">([</span><span class="n">line_a</span><span class="p">,</span> <span class="n">line_b</span><span class="p">])</span>
 
 <span class="gp">In [13]: </span><span class="n">multi_line</span>
-<span class="gh">Out[13]: </span><span class="go">&lt;shapely.geometry.multilinestring.MultiLineString at 0x1f6141404e0&gt;</span>
+<span class="gh">Out[13]: </span><span class="go">&lt;shapely.geometry.multilinestring.MultiLineString at 0x25fd4e74978&gt;</span>
 </pre></div>
 </div>
 <p>Thus, the <code class="docutils literal"><span class="pre">line_b</span></code> continues from the same node ( (1,1) ) where <code class="docutils literal"><span class="pre">line_a</span></code> ends.</p>
@@ -458,30 +458,30 @@ Let&#8217;s start by <a class="reference external" href="../../_static/data/L3/P
 
 <span class="gp">In [20]: </span><span class="n">polys</span>
 <span class="gh">Out[20]: </span><span class="go"></span>
-<span class="go">   Description              Name  \</span>
-<span class="go">0               Suur-Espoonlahti   </span>
-<span class="go">1                 Suur-Kauklahti   </span>
-<span class="go">2                    Vanha-Espoo   </span>
-<span class="go">3                  Pohjois-Espoo   </span>
-<span class="go">4                 Suur-Matinkylä   </span>
-<span class="go">5                     Kauniainen   </span>
-<span class="go">6                Suur-Leppävaara   </span>
-<span class="go">7                   Suur-Tapiola   </span>
-<span class="go">8                       Myyrmäki   </span>
-<span class="go">9                        Kivistö   </span>
-<span class="go">10                     Eteläinen   </span>
-<span class="go">11                    Kaakkoinen   </span>
-<span class="go">12                      Keskinen   </span>
-<span class="go">13                      Läntinen   </span>
-<span class="go">14                     Pohjoinen   </span>
-<span class="go">15                     Koillinen   </span>
-<span class="go">16                     Aviapolis   </span>
-<span class="go">17                     Tikkurila   </span>
-<span class="go">18                     Koivukylä   </span>
-<span class="go">19                       Itäinen   </span>
-<span class="go">20                   Östersundom   </span>
-<span class="go">21                      Hakunila   </span>
-<span class="go">22                         Korso   </span>
+<span class="go">                Name Description  \</span>
+<span class="go">0   Suur-Espoonlahti               </span>
+<span class="go">1     Suur-Kauklahti               </span>
+<span class="go">2        Vanha-Espoo               </span>
+<span class="go">3      Pohjois-Espoo               </span>
+<span class="go">4     Suur-Matinkylä               </span>
+<span class="go">5         Kauniainen               </span>
+<span class="go">6    Suur-Leppävaara               </span>
+<span class="go">7       Suur-Tapiola               </span>
+<span class="go">8           Myyrmäki               </span>
+<span class="go">9            Kivistö               </span>
+<span class="go">10         Eteläinen               </span>
+<span class="go">11        Kaakkoinen               </span>
+<span class="go">12          Keskinen               </span>
+<span class="go">13          Läntinen               </span>
+<span class="go">14         Pohjoinen               </span>
+<span class="go">15         Koillinen               </span>
+<span class="go">16         Aviapolis               </span>
+<span class="go">17         Tikkurila               </span>
+<span class="go">18         Koivukylä               </span>
+<span class="go">19           Itäinen               </span>
+<span class="go">20       Östersundom               </span>
+<span class="go">21          Hakunila               </span>
+<span class="go">22             Korso               </span>
 
 <span class="go">                                             geometry  </span>
 <span class="go">0   POLYGON Z ((24.775059677807 60.1090604462157 0...  </span>
@@ -594,25 +594,25 @@ easy by passing the array inside the <code class="docutils literal"><span class=
 
 <span class="gp">In [33]: </span><span class="n">pip_data</span>
 <span class="gh">Out[33]: </span><span class="go"></span>
-<span class="go">                                          address  \</span>
-<span class="go">0           Kampinkuja 1, 00100 Helsinki, Finland   </span>
-<span class="go">1            Kaivokatu 8, 00101 Helsinki, Finland   </span>
-<span class="go">4      Tyynenmerenkatu 9, 00220 Helsinki, Finland   </span>
-<span class="go">10       Rautatientori 1, 00100 Helsinki, Finland   </span>
-<span class="go">30  Urho Kekkosen katu 1, 00100 Helsinki, Finland   </span>
-<span class="go">31   Gräsviksgatan 17, 00101 Helsingfors, Finland   </span>
-<span class="go">32  Stillahavsgatan 3, 00220 Helsingfors, Finland   </span>
-<span class="go">33    Vilhelmsgatan 4, 00101 Helsingfors, Finland   </span>
+<span class="go">                                          address    id  \</span>
+<span class="go">0           Kampinkuja 1, 00100 Helsinki, Finland  1001   </span>
+<span class="go">1            Kaivokatu 8, 00101 Helsinki, Finland  1002   </span>
+<span class="go">4      Tyynenmerenkatu 9, 00220 Helsinki, Finland  1005   </span>
+<span class="go">10       Rautatientori 1, 00100 Helsinki, Finland  1011   </span>
+<span class="go">30  Urho Kekkosen katu 1, 00100 Helsinki, Finland  1031   </span>
+<span class="go">31   Gräsviksgatan 17, 00101 Helsingfors, Finland  1032   </span>
+<span class="go">32  Stillahavsgatan 3, 00220 Helsingfors, Finland  1033   </span>
+<span class="go">33    Vilhelmsgatan 4, 00101 Helsingfors, Finland  1034   </span>
 
-<span class="go">                                geometry    id  </span>
-<span class="go">0          POINT (24.9301701 60.1683731)  1001  </span>
-<span class="go">1          POINT (24.9418933 60.1698665)  1002  </span>
-<span class="go">4          POINT (24.9214846 60.1565781)  1005  </span>
-<span class="go">10           POINT (24.94251 60.1711874)  1011  </span>
-<span class="go">30         POINT (24.9337569 60.1694809)  1031  </span>
-<span class="go">31  POINT (24.9250072 60.16500139999999)  1032  </span>
-<span class="go">32          POINT (24.9214046 60.159069)  1033  </span>
-<span class="go">33         POINT (24.9468514 60.1719108)  1034  </span>
+<span class="go">                                geometry  </span>
+<span class="go">0          POINT (24.9301701 60.1683731)  </span>
+<span class="go">1          POINT (24.9418933 60.1698665)  </span>
+<span class="go">4          POINT (24.9214846 60.1565781)  </span>
+<span class="go">10           POINT (24.94251 60.1711874)  </span>
+<span class="go">30         POINT (24.9337569 60.1694809)  </span>
+<span class="go">31  POINT (24.9250072 60.16500139999999)  </span>
+<span class="go">32          POINT (24.9214046 60.159069)  </span>
+<span class="go">33         POINT (24.9468514 60.1719108)  </span>
 </pre></div>
 </div>
 <p>Let&#8217;s finally confirm that our Point in Polygon query worked as it should by plotting the data.</p>
@@ -660,7 +660,7 @@ easy by passing the array inside the <code class="docutils literal"><span class=
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Henrikki Tenkanen.
-      Last updated on Nov 27, 2017.
+      Last updated on Dec 03, 2017.
 
     </p>
   </div>

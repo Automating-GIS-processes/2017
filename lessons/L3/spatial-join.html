@@ -299,19 +299,19 @@ above.</p>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="go"># See the first rows</span>
 <span class="gp">In [1]: </span><span class="n">pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 <span class="gh">Out[1]: </span><span class="go"></span>
-<span class="go">   ASUKKAITA  ASVALJYYS  IKA0_9  IKA10_19  IKA20_29  IKA30_39  IKA40_49  \</span>
-<span class="go">0          8       31.0      99        99        99        99        99   </span>
-<span class="go">1          6       42.0      99        99        99        99        99   </span>
-<span class="go">2          8       44.0      99        99        99        99        99   </span>
-<span class="go">3          7       64.0      99        99        99        99        99   </span>
-<span class="go">4         19       23.0      99        99        99        99        99   </span>
+<span class="go">   INDEX  ASUKKAITA  ASVALJYYS  IKA0_9  IKA10_19  IKA20_29  IKA30_39  \</span>
+<span class="go">0    688          8       31.0      99        99        99        99   </span>
+<span class="go">1    703          6       42.0      99        99        99        99   </span>
+<span class="go">2    710          8       44.0      99        99        99        99   </span>
+<span class="go">3    711          7       64.0      99        99        99        99   </span>
+<span class="go">4    715         19       23.0      99        99        99        99   </span>
 
-<span class="go">   IKA50_59  IKA60_69  IKA70_79  IKA_YLI80  INDEX  \</span>
-<span class="go">0        99        99        99         99    688   </span>
-<span class="go">1        99        99        99         99    703   </span>
-<span class="go">2        99        99        99         99    710   </span>
-<span class="go">3        99        99        99         99    711   </span>
-<span class="go">4        99        99        99         99    715   </span>
+<span class="go">   IKA40_49  IKA50_59  IKA60_69  IKA70_79  IKA_YLI80  \</span>
+<span class="go">0        99        99        99        99         99   </span>
+<span class="go">1        99        99        99        99         99   </span>
+<span class="go">2        99        99        99        99         99   </span>
+<span class="go">3        99        99        99        99         99   </span>
+<span class="go">4        99        99        99        99         99   </span>
 
 <span class="go">                                            geometry  </span>
 <span class="go">0  POLYGON ((25472499.99532626 6689749.005069185,...  </span>
@@ -336,8 +336,8 @@ parameter <code class="docutils literal"><span class="pre">columns={'oldname':</
 <span class="go"># See the column names and confirm that we now have a column called &#39;pop15&#39;</span>
 <span class="gp">In [3]: </span><span class="n">pop</span><span class="o">.</span><span class="n">columns</span>
 <span class="gh">Out[3]: </span><span class="go"></span>
-<span class="go">Index([&#39;pop15&#39;, &#39;ASVALJYYS&#39;, &#39;IKA0_9&#39;, &#39;IKA10_19&#39;, &#39;IKA20_29&#39;, &#39;IKA30_39&#39;,</span>
-<span class="go">       &#39;IKA40_49&#39;, &#39;IKA50_59&#39;, &#39;IKA60_69&#39;, &#39;IKA70_79&#39;, &#39;IKA_YLI80&#39;, &#39;INDEX&#39;,</span>
+<span class="go">Index([&#39;INDEX&#39;, &#39;pop15&#39;, &#39;ASVALJYYS&#39;, &#39;IKA0_9&#39;, &#39;IKA10_19&#39;, &#39;IKA20_29&#39;,</span>
+<span class="go">       &#39;IKA30_39&#39;, &#39;IKA40_49&#39;, &#39;IKA50_59&#39;, &#39;IKA60_69&#39;, &#39;IKA70_79&#39;, &#39;IKA_YLI80&#39;,</span>
 <span class="go">       &#39;geometry&#39;],</span>
 <span class="go">      dtype=&#39;object&#39;)</span>
 </pre></div>
@@ -382,13 +382,13 @@ addresses point layer <code class="docutils literal"><span class="pre">addresses
 <span class="go"># Check the head of the file</span>
 <span class="gp">In [9]: </span><span class="n">addresses</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="gh">Out[9]: </span><span class="go"></span>
-<span class="go">                                 address  \</span>
-<span class="go">0  Kampinkuja 1, 00100 Helsinki, Finland   </span>
-<span class="go">1   Kaivokatu 8, 00101 Helsinki, Finland   </span>
+<span class="go">                                 address    id  \</span>
+<span class="go">0  Kampinkuja 1, 00100 Helsinki, Finland  1001   </span>
+<span class="go">1   Kaivokatu 8, 00101 Helsinki, Finland  1002   </span>
 
-<span class="go">                                      geometry    id  </span>
-<span class="go">0  POINT (25496123.30852197 6672833.941567578)  1001  </span>
-<span class="go">1  POINT (25496774.28242895 6672999.698581985)  1002  </span>
+<span class="go">                                      geometry  </span>
+<span class="go">0  POINT (25496123.30852197 6672833.941567578)  </span>
+<span class="go">1  POINT (25496774.28242895 6672999.698581985)  </span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -439,19 +439,19 @@ e.g. from the spatial join that we are conducting here.</p>
 <span class="go"># Let&#39;s check the result</span>
 <span class="gp">In [14]: </span><span class="n">join</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 <span class="gh">Out[14]: </span><span class="go"></span>
-<span class="go">                                       address  \</span>
-<span class="go">0        Kampinkuja 1, 00100 Helsinki, Finland   </span>
-<span class="go">1         Kaivokatu 8, 00101 Helsinki, Finland   </span>
-<span class="go">10    Rautatientori 1, 00100 Helsinki, Finland   </span>
-<span class="go">3            Itäväylä, 00900 Helsinki, Finland   </span>
-<span class="go">4   Tyynenmerenkatu 9, 00220 Helsinki, Finland   </span>
+<span class="go">                                       address    id  \</span>
+<span class="go">0        Kampinkuja 1, 00100 Helsinki, Finland  1001   </span>
+<span class="go">1         Kaivokatu 8, 00101 Helsinki, Finland  1002   </span>
+<span class="go">10    Rautatientori 1, 00100 Helsinki, Finland  1011   </span>
+<span class="go">3            Itäväylä, 00900 Helsinki, Finland  1004   </span>
+<span class="go">4   Tyynenmerenkatu 9, 00220 Helsinki, Finland  1005   </span>
 
-<span class="go">                                       geometry    id  index_right  pop15  </span>
-<span class="go">0   POINT (25496123.30852197 6672833.941567578)  1001         3326    173  </span>
-<span class="go">1   POINT (25496774.28242895 6672999.698581985)  1002         3449     31  </span>
-<span class="go">10  POINT (25496808.64582102 6673146.836896984)  1011         3449     31  </span>
-<span class="go">3   POINT (25505098.34340289 6677972.568484426)  1004         5112    353  </span>
-<span class="go">4   POINT (25495639.56049686 6671520.343245601)  1005         3259   1397  </span>
+<span class="go">                                       geometry  index_right  pop15  </span>
+<span class="go">0   POINT (25496123.30852197 6672833.941567578)         3326    173  </span>
+<span class="go">1   POINT (25496774.28242895 6672999.698581985)         3449     31  </span>
+<span class="go">10  POINT (25496808.64582102 6673146.836896984)         3449     31  </span>
+<span class="go">3   POINT (25505098.34340289 6677972.568484426)         5112    353  </span>
+<span class="go">4   POINT (25495639.56049686 6671520.343245601)         3259   1397  </span>
 </pre></div>
 </div>
 <p>Awesome! Now we have performed a successful spatial join where we got
@@ -519,7 +519,7 @@ is.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Henrikki Tenkanen.
-      Last updated on Nov 27, 2017.
+      Last updated on Dec 03, 2017.
 
     </p>
   </div>
