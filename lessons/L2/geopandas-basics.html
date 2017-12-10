@@ -181,6 +181,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../L6/04-processing-script.html#run-the-script">Run the script</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L6/ex-6.html">Exercise 6</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Lesson 7</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L7/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L7/lecture.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L7/retrieve-osm-data.html">Retrieving OpenStreetMap data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L7/network-analysis.html">Network analysis in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L7/ex-7.html">Exercise 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L7/exercise-7-hints.html">Exercise 7 hints</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Final Assignment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../FA/final-assignment.html">Final assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FA/fa-hints.html">Final Assignment hints</a></li>
+</ul>
 
             
           
@@ -277,49 +291,13 @@ DAMSELFISH_distributions.shx
 
 <span class="go"># Read file using gpd.read_file()</span>
 <span class="gp">In [3]: </span><span class="n">data</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">CPLE_AppDefinedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-3-06e9e31513fc&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
-
-<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\geopandas\io\file.py</span> in <span class="ni">read_file</span><span class="nt">(filename, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span><span class="s2">     bbox = kwargs.pop(&#39;bbox&#39;, None)</span>
-<span class="ne">---&gt; </span><span class="mi">19</span><span class="s2">     with fiona.open(filename, **kwargs) as f:</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span><span class="s2">         crs = f.crs</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span><span class="s2">         if bbox is not None:</span>
-
-<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\fiona\__init__.py</span> in <span class="ni">open</span><span class="nt">(path, mode, driver, schema, crs, encoding, layer, vfs, enabled_drivers, crs_wkt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">163</span><span class="s2">         c = Collection(path, mode, driver=driver, encoding=encoding,</span>
-<span class="g g-Whitespace">    </span><span class="mi">164</span><span class="s2">                        layer=layer, vsi=vsi, archive=archive,</span>
-<span class="ne">--&gt; </span><span class="mi">165</span><span class="s2">                        enabled_drivers=enabled_drivers)</span>
-<span class="g g-Whitespace">    </span><span class="mi">166</span><span class="s2">     elif mode == &#39;w&#39;:</span>
-<span class="g g-Whitespace">    </span><span class="mi">167</span><span class="s2">         if schema:</span>
-
-<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\fiona\collection.py</span> in <span class="ni">__init__</span><span class="nt">(self, path, mode, driver, schema, crs, encoding, layer, vsi, archive, enabled_drivers, crs_wkt, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span><span class="s2">             if self.mode == &#39;r&#39;:</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span><span class="s2">                 self.session = Session()</span>
-<span class="ne">--&gt; </span><span class="mi">153</span><span class="s2">                 self.session.start(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span><span class="s2">             elif self.mode in (&#39;a&#39;, &#39;w&#39;):</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="s2">                 self.session = WritingSession()</span>
-
-<span class="nn">fiona/ogrext.pyx</span> in <span class="ni">fiona.ogrext.Session.start</span><span class="nt">()</span>
-
-<span class="nn">fiona/_err.pyx</span> in <span class="ni">fiona._err.GDALErrCtxManager.__exit__</span><span class="nt">()</span>
-
-<span class="ne">CPLE_AppDefinedError</span>: b&#39;Recode from ANSI 1252 to UTF-8 not supported, treated as ISO8859-1 to UTF-8.&#39;
 </pre></div>
 </div>
 <ul class="simple">
 <li>Let&#8217;s see what datatype is our &#8216;data&#8217; variable</li>
 </ul>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-4-0291bd62deaa&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+<span class="gh">Out[4]: </span><span class="go">geopandas.geodataframe.GeoDataFrame</span>
 </pre></div>
 </div>
 <p>Okey so from the above we can see that our <code class="docutils literal"><span class="pre">data</span></code> -variable is a
@@ -332,12 +310,50 @@ some special features and functions that are useful in GIS.</p>
 </ul>
 <p><code class="docutils literal"><span class="pre">head()</span></code> -function prints the first 5 rows by default</p>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-5-199065406915&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[5]: </span><span class="go"></span>
+<span class="go">      ID_NO             BINOMIAL  ORIGIN COMPILER  YEAR  \</span>
+<span class="go">0  183963.0   Stegastes leucorus       1     IUCN  2010   </span>
+<span class="go">1  183963.0   Stegastes leucorus       1     IUCN  2010   </span>
+<span class="go">2  183963.0   Stegastes leucorus       1     IUCN  2010   </span>
+<span class="go">3  183793.0  Chromis intercrusma       1     IUCN  2010   </span>
+<span class="go">4  183793.0  Chromis intercrusma       1     IUCN  2010   </span>
 
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+<span class="go">                                            CITATION SOURCE DIST_COMM ISLAND  \</span>
+<span class="go">0  International Union for Conservation of Nature...   None      None   None   </span>
+<span class="go">1  International Union for Conservation of Nature...   None      None   None   </span>
+<span class="go">2  International Union for Conservation of Nature...   None      None   None   </span>
+<span class="go">3  International Union for Conservation of Nature...   None      None   None   </span>
+<span class="go">4  International Union for Conservation of Nature...   None      None   None   </span>
+
+<span class="go">  SUBSPECIES                        ...                         RL_UPDATE  \</span>
+<span class="go">0       None                        ...                            2012.1   </span>
+<span class="go">1       None                        ...                            2012.1   </span>
+<span class="go">2       None                        ...                            2012.1   </span>
+<span class="go">3       None                        ...                            2012.1   </span>
+<span class="go">4       None                        ...                            2012.1   </span>
+
+<span class="go">  KINGDOM_NA  PHYLUM_NAM      CLASS_NAME   ORDER_NAME     FAMILY_NAM  \</span>
+<span class="go">0   ANIMALIA    CHORDATA  ACTINOPTERYGII  PERCIFORMES  POMACENTRIDAE   </span>
+<span class="go">1   ANIMALIA    CHORDATA  ACTINOPTERYGII  PERCIFORMES  POMACENTRIDAE   </span>
+<span class="go">2   ANIMALIA    CHORDATA  ACTINOPTERYGII  PERCIFORMES  POMACENTRIDAE   </span>
+<span class="go">3   ANIMALIA    CHORDATA  ACTINOPTERYGII  PERCIFORMES  POMACENTRIDAE   </span>
+<span class="go">4   ANIMALIA    CHORDATA  ACTINOPTERYGII  PERCIFORMES  POMACENTRIDAE   </span>
+
+<span class="go">  GENUS_NAME   SPECIES_NA CATEGORY  \</span>
+<span class="go">0  Stegastes     leucorus       VU   </span>
+<span class="go">1  Stegastes     leucorus       VU   </span>
+<span class="go">2  Stegastes     leucorus       VU   </span>
+<span class="go">3    Chromis  intercrusma       LC   </span>
+<span class="go">4    Chromis  intercrusma       LC   </span>
+
+<span class="go">                                            geometry  </span>
+<span class="go">0  POLYGON ((-115.6437454219999 29.71392059300007...  </span>
+<span class="go">1  POLYGON ((-105.589950704 21.89339825500002, -1...  </span>
+<span class="go">2  POLYGON ((-111.159618439 19.01535626700007, -1...  </span>
+<span class="go">3  POLYGON ((-80.86500229899997 -0.77894492099994...  </span>
+<span class="go">4  POLYGON ((-67.33922225599997 -55.6761029239999...  </span>
+
+<span class="go">[5 rows x 24 columns]</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -382,12 +398,13 @@ storing geometric information in geopandas.</p>
 </ul>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="go"># It is possible to use only specific columns by specifying the column name within square brackets []</span>
 <span class="gp">In [7]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-7-32f2c32e6236&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+<span class="gh">Out[7]: </span><span class="go"></span>
+<span class="go">0    POLYGON ((-115.6437454219999 29.71392059300007...</span>
+<span class="go">1    POLYGON ((-105.589950704 21.89339825500002, -1...</span>
+<span class="go">2    POLYGON ((-111.159618439 19.01535626700007, -1...</span>
+<span class="go">3    POLYGON ((-80.86500229899997 -0.77894492099994...</span>
+<span class="go">4    POLYGON ((-67.33922225599997 -55.6761029239999...</span>
+<span class="go">Name: geometry, dtype: object</span>
 </pre></div>
 </div>
 <p>Since spatial data is stored as Shapely objects, <strong>it is possible to use
@@ -398,12 +415,6 @@ earlier.</p>
 </ul>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="go"># Make a selection that contains only the first five rows</span>
 <span class="gp">In [8]: </span><span class="n">selection</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-8-5268f6825ed0&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">selection</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
 </pre></div>
 </div>
 <p>We can iterate over the selected rows using a specific
@@ -412,15 +423,11 @@ earlier.</p>
 <span class="gp">   ...: </span>    <span class="n">poly_area</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span>
 <span class="gp">   ...: </span>    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Polygon area at index {0} is: {1:.3f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">poly_area</span><span class="p">))</span>
 <span class="gp">   ...: </span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-9-08c3b3e7c66c&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">selection</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">poly_area</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Polygon area at index {0} is: {1:.3f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">poly_area</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-
-<span class="ne">NameError</span>: name &#39;selection&#39; is not defined
+<span class="go">Polygon area at index 0 is: 19.396</span>
+<span class="go">Polygon area at index 1 is: 6.146</span>
+<span class="go">Polygon area at index 2 is: 2.697</span>
+<span class="go">Polygon area at index 3 is: 87.461</span>
+<span class="go">Polygon area at index 4 is: 0.001</span>
 </pre></div>
 </div>
 <p>Hence, as you might guess from here, all the functionalities of <strong>Pandas</strong> are available directly in
@@ -430,22 +437,14 @@ Geopandas without the need to call pandas separately because Geopandas is an <st
 </ul>
 <p>and store the areas individual polygons. Calculating the areas of polygons is really easy in geopandas by using <code class="docutils literal"><span class="pre">GeoDataFrame.area</span></code> attribute:</p>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">area</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-10-484d46b8d972&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">area</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
 </pre></div>
 </div>
 <p>Let&#8217;s see the first 2 rows of our &#8216;area&#8217; column.</p>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-11-e020ef490d93&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+<span class="gh">Out[11]: </span><span class="go"></span>
+<span class="go">0    19.396254</span>
+<span class="go">1     6.145902</span>
+<span class="go">Name: area, dtype: float64</span>
 </pre></div>
 </div>
 <p>Okey, so we can see that the area of our first polygon seems to be 19.39 and 6.14 for the second polygon.
@@ -453,29 +452,13 @@ They correspond to the ones we saw in previous step when iterating rows, hence, 
 Let&#8217;s check what is the min and the max of those areas using familiar functions from our previous Pandas lessions.</p>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="go"># Maximum area</span>
 <span class="gp">In [12]: </span><span class="n">max_area</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-12-b31924eb8270&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">max_area</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
-
-<span class="c1"># Mean area</span>
+<span class="go"># Mean area</span>
 <span class="gp">In [13]: </span><span class="n">mean_area</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="go">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ---------------------------------------------------------------------------</span>
-<span class="go">NameError                                 Traceback (most recent call last)</span>
-<span class="go">&lt;ipython-input-13-135f8288a2e7&gt; in &lt;module&gt;()</span>
-<span class="go">----&gt; 1 mean_area = data[&#39;area&#39;].mean()</span>
-
-<span class="go">NameError: name &#39;data&#39; is not defined</span>
 
 <span class="gp">In [14]: </span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Max area: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">Mean area: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">max_area</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_area</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="go">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ---------------------------------------------------------------------------</span>
-<span class="go">NameError                                 Traceback (most recent call last)</span>
-<span class="go">&lt;ipython-input-14-4723d62ae6c9&gt; in &lt;module&gt;()</span>
-<span class="go">----&gt; 1 print(&quot;Max area: %s\nMean area: %s&quot; % (round(max_area, 2), round(mean_area, 2)))</span>
-
-<span class="go">NameError: name &#39;max_area&#39; is not defined</span>
+<span class="go">Max area: 1493.2</span>
+<span class="go">Mean area: 19.96</span>
 </pre></div>
 </div>
 <p>Okey, so the largest Polygon in our dataset seems to be 1494 square decimal degrees (~ 165 000 km2) and the average size is ~20 square decimal degrees (~2200 km2).</p>
@@ -530,7 +513,7 @@ data yet.</p>
 
 <span class="go"># Let&#39;s see what we have</span>
 <span class="gp">In [20]: </span><span class="n">poly</span>
-<span class="gh">Out[20]: </span><span class="go">&lt;shapely.geometry.polygon.Polygon at 0x19583096048&gt;</span>
+<span class="gh">Out[20]: </span><span class="go">&lt;shapely.geometry.polygon.Polygon at 0x1ea969cc7b8&gt;</span>
 </pre></div>
 </div>
 <p>Okey, so now we have appropriate Polygon -object.</p>
@@ -617,23 +600,12 @@ Group by function is useful to group data based on values on selected column(s).
 </ul>
 </li>
 </ul>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="go"># Group the data by column &#39;binomial&#39;</span>
-<span class="gp">In [29]: </span><span class="n">grouped</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;binomial&#39;</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-29-86b8030843f6&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">grouped</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;binomial&#39;</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="go"># Group the data by column &#39;BINOMIAL&#39;</span>
+<span class="gp">In [29]: </span><span class="n">grouped</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;BINOMIAL&#39;</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
-
-<span class="c1"># Let&#39;s see what we got</span>
+<span class="go"># Let&#39;s see what we got</span>
 <span class="gp">In [30]: </span><span class="n">grouped</span>
-<span class="go">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ---------------------------------------------------------------------------</span>
-<span class="go">NameError                                 Traceback (most recent call last)</span>
-<span class="go">&lt;ipython-input-30-fc3fb79b8f68&gt; in &lt;module&gt;()</span>
-<span class="go">----&gt; 1 grouped</span>
-
-<span class="go">NameError: name &#39;grouped&#39; is not defined</span>
+<span class="gh">Out[30]: </span><span class="go">&lt;pandas.core.groupby.DataFrameGroupBy object at 0x000001EA969DCCC0&gt;</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -643,23 +615,56 @@ Group by function is useful to group data based on values on selected column(s).
 <span class="gp">In [31]: </span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">grouped</span><span class="p">:</span>
 <span class="gp">   ....: </span>    <span class="n">individual_fish</span> <span class="o">=</span> <span class="n">values</span>
 <span class="gp">   ....: </span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-31-caebcb1ec4f7&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">grouped</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">individual_fish</span> <span class="o">=</span> <span class="n">values</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
 
-<span class="ne">NameError</span>: name &#39;grouped&#39; is not defined
-
-<span class="c1"># Let&#39;s see what is the LAST item that we iterated</span>
+<span class="go"># Let&#39;s see what is the LAST item that we iterated</span>
 <span class="gp">In [32]: </span><span class="n">individual_fish</span>
-<span class="go">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ---------------------------------------------------------------------------</span>
-<span class="go">NameError                                 Traceback (most recent call last)</span>
-<span class="go">&lt;ipython-input-32-bf9af2cb7630&gt; in &lt;module&gt;()</span>
-<span class="go">----&gt; 1 individual_fish</span>
+<span class="gh">Out[32]: </span><span class="go"></span>
+<span class="go">       ID_NO                BINOMIAL  ORIGIN COMPILER  YEAR  \</span>
+<span class="go">27  154915.0  Teixeirichthys jordani       1     None  2012   </span>
+<span class="go">28  154915.0  Teixeirichthys jordani       1     None  2012   </span>
+<span class="go">29  154915.0  Teixeirichthys jordani       1     None  2012   </span>
+<span class="go">30  154915.0  Teixeirichthys jordani       1     None  2012   </span>
+<span class="go">31  154915.0  Teixeirichthys jordani       1     None  2012   </span>
+<span class="go">32  154915.0  Teixeirichthys jordani       1     None  2012   </span>
+<span class="go">33  154915.0  Teixeirichthys jordani       1     None  2012   </span>
 
-<span class="go">NameError: name &#39;individual_fish&#39; is not defined</span>
+<span class="go">                                             CITATION SOURCE DIST_COMM ISLAND  \</span>
+<span class="go">27  Red List Index (Sampled Approach), Zoological ...   None      None   None   </span>
+<span class="go">28  Red List Index (Sampled Approach), Zoological ...   None      None   None   </span>
+<span class="go">29  Red List Index (Sampled Approach), Zoological ...   None      None   None   </span>
+<span class="go">30  Red List Index (Sampled Approach), Zoological ...   None      None   None   </span>
+<span class="go">31  Red List Index (Sampled Approach), Zoological ...   None      None   None   </span>
+<span class="go">32  Red List Index (Sampled Approach), Zoological ...   None      None   None   </span>
+<span class="go">33  Red List Index (Sampled Approach), Zoological ...   None      None   None   </span>
+
+<span class="go">   SUBSPECIES    ...     KINGDOM_NA PHYLUM_NAM      CLASS_NAME   ORDER_NAME  \</span>
+<span class="go">27       None    ...       ANIMALIA   CHORDATA  ACTINOPTERYGII  PERCIFORMES   </span>
+<span class="go">28       None    ...       ANIMALIA   CHORDATA  ACTINOPTERYGII  PERCIFORMES   </span>
+<span class="go">29       None    ...       ANIMALIA   CHORDATA  ACTINOPTERYGII  PERCIFORMES   </span>
+<span class="go">30       None    ...       ANIMALIA   CHORDATA  ACTINOPTERYGII  PERCIFORMES   </span>
+<span class="go">31       None    ...       ANIMALIA   CHORDATA  ACTINOPTERYGII  PERCIFORMES   </span>
+<span class="go">32       None    ...       ANIMALIA   CHORDATA  ACTINOPTERYGII  PERCIFORMES   </span>
+<span class="go">33       None    ...       ANIMALIA   CHORDATA  ACTINOPTERYGII  PERCIFORMES   </span>
+
+<span class="go">       FAMILY_NAM      GENUS_NAME SPECIES_NA CATEGORY  \</span>
+<span class="go">27  POMACENTRIDAE  Teixeirichthys    jordani       LC   </span>
+<span class="go">28  POMACENTRIDAE  Teixeirichthys    jordani       LC   </span>
+<span class="go">29  POMACENTRIDAE  Teixeirichthys    jordani       LC   </span>
+<span class="go">30  POMACENTRIDAE  Teixeirichthys    jordani       LC   </span>
+<span class="go">31  POMACENTRIDAE  Teixeirichthys    jordani       LC   </span>
+<span class="go">32  POMACENTRIDAE  Teixeirichthys    jordani       LC   </span>
+<span class="go">33  POMACENTRIDAE  Teixeirichthys    jordani       LC   </span>
+
+<span class="go">                                             geometry       area  </span>
+<span class="go">27  POLYGON ((121.6300326400001 33.04248618400004,...  38.671198  </span>
+<span class="go">28  POLYGON ((32.56219482400007 29.97488975500005,...  37.445735  </span>
+<span class="go">29  POLYGON ((130.9052090560001 34.02498196400006,...  16.939460  </span>
+<span class="go">30  POLYGON ((56.32233070000007 -3.707270205999976...  10.126967  </span>
+<span class="go">31  POLYGON ((40.64476131800006 -10.85502363999996...   7.760303  </span>
+<span class="go">32  POLYGON ((48.11258402900006 -9.335103113999935...   3.434236  </span>
+<span class="go">33  POLYGON ((51.75403543100003 -9.21679305899994,...   2.408620  </span>
+
+<span class="go">[7 rows x 25 columns]</span>
 </pre></div>
 </div>
 <p>From here we can see that an individual_fish variable now contains all the rows that belongs to a fish called <code class="docutils literal"><span class="pre">Teixeirichthys</span> <span class="pre">jordani</span></code>. Notice that the index numbers refer to the row numbers in the
@@ -668,20 +673,10 @@ original data -GeoDataFrame.</p>
 <li>Let&#8217;s check the datatype of the grouped object and what does the <code class="docutils literal"><span class="pre">key</span></code> variable contain</li>
 </ul>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [33]: </span><span class="nb">type</span><span class="p">(</span><span class="n">individual_fish</span><span class="p">)</span>
-<span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-33-76fd3d587eac&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">type</span><span class="p">(</span><span class="n">individual_fish</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;individual_fish&#39; is not defined
+<span class="gh">Out[33]: </span><span class="go">geopandas.geodataframe.GeoDataFrame</span>
 
 <span class="gp">In [34]: </span><span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="go">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ---------------------------------------------------------------------------</span>
-<span class="go">NameError                                 Traceback (most recent call last)</span>
-<span class="go">&lt;ipython-input-34-6931fefa53e4&gt; in &lt;module&gt;()</span>
-<span class="go">----&gt; 1 print(key)</span>
-
-<span class="go">NameError: name &#39;key&#39; is not defined</span>
+<span class="go">                                             Teixeirichthys jordani</span>
 </pre></div>
 </div>
 <p>As can be seen from the example above, each set of data are now grouped into separate GeoDataFrames that we can export into Shapefiles using the variable <code class="docutils literal"><span class="pre">key</span></code>
@@ -738,7 +733,7 @@ handy when dealing with Shapefiles. Doing similar process manually would be real
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Henrikki Tenkanen.
-      Last updated on Dec 08, 2017.
+      Last updated on Dec 10, 2017.
 
     </p>
   </div>
